@@ -9,4 +9,5 @@ public interface UserService {
     public List<UserModel> getAllUsers();
     void deleteUser(long id);
     public UserModel checkUserExist(UserModel user);
+    public List<UserModel> getUsersOrTeachers(boolean teacher);
 }

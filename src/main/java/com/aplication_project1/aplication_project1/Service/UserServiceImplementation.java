@@ -1,5 +1,6 @@
 package com.aplication_project1.aplication_project1.Service;
 
+import com.aplication_project1.aplication_project1.Model.LessonModel;
 import com.aplication_project1.aplication_project1.Model.UserModel;
 import com.aplication_project1.aplication_project1.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -33,5 +34,9 @@ public class UserServiceImplementation implements UserService {
             return user1;
         }
         return null;
+    }
+    @Override
+    public List<UserModel> getUsersOrTeachers(boolean teacher) {
+        return userRepository.findUserOrTeachers(teacher);
     }
 }

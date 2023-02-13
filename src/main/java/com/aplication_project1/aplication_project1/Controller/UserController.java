@@ -1,5 +1,6 @@
 package com.aplication_project1.aplication_project1.Controller;
 
+import com.aplication_project1.aplication_project1.Model.LessonModel;
 import com.aplication_project1.aplication_project1.Model.UserModel;
 import com.aplication_project1.aplication_project1.Service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,4 +47,10 @@ public class UserController {
             return new ResponseEntity<>(user1,HttpStatus.OK);
         }
     }
+
+    @GetMapping("/getUserOrTeachers/{teacher}")
+    public List<UserModel> getUsers(@PathVariable boolean teacher){
+        return userService.getUsersOrTeachers(teacher);
+    }
+
 }
