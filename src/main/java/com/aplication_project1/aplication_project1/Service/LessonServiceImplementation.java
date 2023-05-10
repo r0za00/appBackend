@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class LessonServiceImplementation {
@@ -32,6 +33,10 @@ public class LessonServiceImplementation {
     public List<LessonModel> getTeacherLesson(long id) {
         return lessonRepository.findLessonsByTeacherId(id);
     }
+    public List<LessonModel> getLessonById(long id) {
+        return lessonRepository.showLessonById(id);
+    }
+
 
     public void deleteLesson(long id) {
         lessonRepository.deleteById(id);

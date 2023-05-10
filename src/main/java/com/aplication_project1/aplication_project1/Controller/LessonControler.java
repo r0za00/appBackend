@@ -34,7 +34,10 @@ public class LessonControler {
     public List<LessonModel> getTeacherLesson(@PathVariable long teacherId){
         return lessonService.getTeacherLesson(teacherId);
     }
-
+    @GetMapping("/getLesson/{id}")
+    public List<LessonModel> getLessonById(@PathVariable long id){
+        return lessonService.getLessonById(id);
+    }
     @DeleteMapping("/delete/{id}")
     public void deleteLesson(@PathVariable long id) {
         lessonService.deleteLesson(id);

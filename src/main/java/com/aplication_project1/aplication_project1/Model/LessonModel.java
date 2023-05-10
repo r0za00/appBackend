@@ -17,8 +17,6 @@ public class LessonModel {
     private long id;
     private long userId;
     private long teacherId;
-    private String name;
-    private String surname;
     private String address;
     private String date;
     private String time;
